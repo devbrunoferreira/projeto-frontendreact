@@ -1,0 +1,36 @@
+.produto {
+    width: 15vw;
+    height: 57vh;
+    /* border: 1px solid rgb(190, 190, 190); */
+    border-radius: 12px;
+    padding-bottom: 10px;
+    margin: 10px;
+    box-shadow: 4px 4px 4px 1px rgba(105, 105, 105, 0.2);
+}
+
+.tshirt {
+    width: 15vw;
+    height: 40vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product_title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.product_price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product_button {
+    padding: 5px;
+    background-color: #32fa32;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}

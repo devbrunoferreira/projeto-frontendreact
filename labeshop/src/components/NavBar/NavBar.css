@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.input {
+    margin-left: 5px;
+}
+
+.nav_1 {
+    background-color: #000000;
+    /* background-color: #302f2f; */
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_1 h2 {
+    font-size: 25px;
+}
+
+.cart_image {
+    width: 40px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
