@@ -1,25 +1,25 @@
 [
     {
         "id": 1,
-        "name": "White T-shirt Space",
+        "name": "Space T-shirt",
         "price": 22.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2021/01/11/16103547356a7371bba8aca12cdbcc092b1ee94b5f_thumbnail_600x.webp"
     },
     {
         "id": 2,
-        "name": "Black T-shirt Planets",
+        "name": "Planets T-shirt",
         "price": 25.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2021/03/12/1615543534b8b26b70a8b0876205168898e89c185b_thumbnail_600x.webp"
     },
     {
         "id": 3,
-        "name": "Gray T-shirt Astronaut",
+        "name": "Astronaut T-shirt I",
         "price": 22.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2021/11/22/1637561244b4c8ef2b5abc8d2f36cc855a993b1bbe_thumbnail_600x.webp"
     },
     {
         "id": 4,
-        "name": "Ovni Black T-shirt",
+        "name": "Ovni T-shirt",
         "price": 21.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2022/04/22/1650592641f074298a7a31b99e99fcf4c4d40c41d1_thumbnail_600x.webp"
     },
@@ -31,25 +31,25 @@
     },
     {
         "id": 6,
-        "name": "Black T-shirt Planets II",
+        "name": "Planets T-shirt II",
         "price": 27.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2020/07/24/15955743591a1f0d2b1517827bf174f935d90c08bd_thumbnail_600x.webp"
     },
     {
         "id": 7,
-        "name": "Black & White T-shirt Astronaut",
+        "name": "Astronaut T-shirt B&W",
         "price": 27.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2021/12/29/164075560605ff1f0b24ff7a6986353eb943b46627_thumbnail_600x.webp"
     },
     {
         "id": 8,
-        "name": "Black T-shirt Astronaut II + Sun Glasses",
+        "name": "Black T-shirt + Glasses",
         "price": 50.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2022/11/16/1668568592603ec3c8caeee0661ada5e236fc4bd74_thumbnail_600x.webp"
     },
     {
         "id": 9,
-        "name": "NASA Brown T-shirt",
+        "name": "NASA T-shirt",
         "price": 24.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2022/04/12/16497283269756fdfb1d76322042198baeb76e03d5_thumbnail_600x.webp"
     },
@@ -61,13 +61,13 @@
     },
     {
         "id": 11,
-        "name": "NASA Black T-shirt Especial Edition",
+        "name": "T-shirt Especial Edition",
         "price": 29.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2022/05/07/16518961911de4a13538e1cf18593c33e36c72e2ef_thumbnail_600x.webp"
     },
     {
         "id": 12,
-        "name": "Black & Green Astronaut T-shirt Especial Edition",
+        "name": "Black & Green T-shirt",
         "price": 29.90,
         "image": "https://img.ltwebstatic.com/images3_pi/2022/01/11/164188760084b3ee9f773498dd56eeca7b6a4ffef0_thumbnail_600x.webp"
     }
