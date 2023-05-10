@@ -20,10 +20,31 @@
 
 .searchbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 10px 10px;
-    background-color: #000;
+    background-color: #cac9c9;
     border-top: 2px solid #FFF;
+    color: #000;
+}
+
+.searchbar input {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px 5px;
+    border-radius: 5px;
+    border: 1px solid #bdbcbc;
+}
+
+.searchbar select,
+option {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid #bdbcbc;
+}
+
+.searchbar span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
 }
 
 .main {
@@ -81,6 +102,16 @@
     flex-direction: column;
     align-items: center;
     margin-top: 5px;
+}
+
+.information p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.information span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 div span {

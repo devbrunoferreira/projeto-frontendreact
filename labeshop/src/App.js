@@ -5,7 +5,7 @@ import Products from './data/products.json';
 import './styles.css';
 
 // HOOKS
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // COMPONENTS
 import Header from './components/Header/Header';
@@ -16,6 +16,27 @@ import SearchBar from './components/SearchBar/SearchBar';
 function App() {
 
   const [cartItems, setCartItems] = useState([]);
+  const [order, setOrder] = useState('ascending'); // Ascending and Descending order
+  const [minValue, setMinValue] = useState(0);
+  const [maxValue, setMaxValue] = useState(0);
+  const [searchName, setSearchName] = useState('');
+
+  // BUSCANDO DADOS SALVOS NO LOCALSTORAGE
+  useEffect(() => {
+    const cartLocalStorage = localStorage.getItem("cart_items");
+    if(cartLocalStorage){
+      setCartItems(JSON.parse(cartLocalStorage));
+    }
+  }, []);
+
+  // SALVANDO DADOS COM LOCALSTORAGE
+
+  useEffect(() => {
+    if(cartItems.length > 0){
+      localStorage.setItem("cart_items", JSON.stringify(cartItems));
+    }
+  }, [cartItems]);
+
 
   // ADICIONANDO PRODUTO AO CARRINHO
   const addingToCart = (product) => {
@@ -48,10 +69,27 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <SearchBar /> */}
+      <SearchBar
+      order={order}
+      setOrder={setOrder}
+      setMinValue={setMinValue}
+      setMaxValue={setMaxValue}
+      setSearchName={setSearchName}
+      />
       <div className='row'>
-        <Main products={Products} adding={addingToCart} />
-        <Cart cartItems={cartItems} adding={addingToCart} removing={removingFromCart}/>
+        <Main 
+        products={Products} 
+        adding={addingToCart} 
+        order={order}
+        minValue={minValue}
+        maxValue={maxValue}
+        searchName={searchName}
+        />
+        <Cart 
+        cartItems={cartItems} 
+        adding={addingToCart} 
+        removing={removingFromCart}
+        />
       </div>
     </div>
   );
