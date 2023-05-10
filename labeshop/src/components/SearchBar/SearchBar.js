@@ -1,12 +1,38 @@
 
-const SearchBar = () => {
+const SearchBar = ({ order, setOrder, setMinValue, setMaxValue, setSearchName }) => {
+
   return (
     <div className='searchbar'>
         <div>
-            <input type="search" size={20} />
+          <span>Search: </span>
+          <input 
+          type="text" 
+          placeholder="Search name" 
+          onChange={(event) => setSearchName(event.target.value)} 
+          />
         </div>
         <div>
-            <input type="search" size={20} />
+          <span>Value: </span>
+            <input 
+            type="number" 
+            placeholder="Min. value" 
+            onChange={(event) => setMinValue(event.target.value)} 
+            />
+            <input 
+            type="number" 
+            placeholder="Max. value"
+            onChange={(event) => setMaxValue(event.target.value)} 
+            />
+        </div>
+        <div>
+          <span>Order: </span>
+            <select 
+            value={order} 
+            onChange={(event) => setOrder(event.target.value)}
+            >
+              <option value="ascending">Ascending</option>
+              <option value="descending">Descending</option>
+            </select>
         </div>
     </div>
   );
