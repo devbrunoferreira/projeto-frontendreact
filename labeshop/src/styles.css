@@ -136,6 +136,25 @@ div span {
     background-color: #5efa5e;
 }
 
+.cart_icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    left: 180px;
+    top: 40px;
+    background-color: #f04040;
+    padding: 5px;
+    border-radius: 50px;
+    margin-left: 2px;
+    border: none;
+    color: #ffffff;
+    width: 1.5rem;
+    font-size: 13px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 a {
     text-decoration: none;
     color: #FFF;
@@ -150,6 +169,7 @@ a {
 .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .column-1 {

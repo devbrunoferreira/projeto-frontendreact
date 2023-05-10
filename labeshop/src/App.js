@@ -68,7 +68,9 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header
+      countCarItems={cartItems.length}
+      />
       <SearchBar
       order={order}
       setOrder={setOrder}
