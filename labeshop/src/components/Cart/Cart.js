@@ -1,4 +1,8 @@
+// REACT ICONS
 import { FaPlusCircle, FaMinusCircle } from 'react-icons/fa';
+
+// STYLED
+import { CartContainer, Row, Column1, Column2, CheckOutButton } from './styled';
 
 const Cart = ({ cartItems, adding, removing }) => {
 
@@ -8,48 +12,48 @@ const Cart = ({ cartItems, adding, removing }) => {
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
   return (
-    <div className="block cart column-1">
-        <h2 className="cart-h2">Cart Items</h2>
+    <CartContainer>
+        <h2>Cart Items</h2>
         <div>{cartItems.length === 0 && <div>Cart is empty!</div>}</div>
         {cartItems.map( item => (
-          <div key={item.id} className='row' >
-            <div className='column-2'>{item.name}</div>
-            <div className='column-2'>
+          <Row key={item.id} >
+            <Column2>{item.name}</Column2>
+            <Column2>
               <FaPlusCircle size={15} onClick={() => adding(item)} className='add' />
               <FaMinusCircle size={15} onClick={() => removing(item)} className='remove' />
-            </div>
+            </Column2>
             <div>
               {item.qty} x ${item.price.toFixed(2)}
             </div>
-          </div>
+          </Row>
         ))}
         {cartItems.length !== 0 && (
           <>
             <br/>
             <hr/>
             <br/>
-              <div className='row'>
-                <div className='column-2'>Items Price</div>
-                <div className='column-1 text-right margin-left'>$ {itemsPrice.toFixed(2)}</div>
-              </div>
-              <div className='row'>
-                <div className='column-2'>Tax Price</div>
-                <div className='column-1 text-right margin-left'>$ {taxPrice.toFixed(2)}</div>
-              </div>
-              <div className='row'>
-                <div className='column-2'>Shipping Price</div>
-                <div className='column-1 text-right margin-left'>$ {shippingPrice.toFixed(2)}</div>
-              </div>
+              <Row>
+                <Column2>Items Price</Column2>
+                <Column1>$ {itemsPrice.toFixed(2)}</Column1>
+              </Row>
+              <Row>
+                <Column2>Tax Price</Column2>
+                <Column1>$ {taxPrice.toFixed(2)}</Column1>
+              </Row>
+              <Row>
+                <Column2>Shipping Price</Column2>
+                <Column1>$ {shippingPrice.toFixed(2)}</Column1>
+              </Row>
               <br/>
-              <div className='row'>
-                <div className='column-2'><strong>Total Price</strong></div>
-                <div className='column-1 text-right margin-left'>$ {totalPrice.toFixed(2)}</div>
-              </div>
+              <Row>
+                <Column2><strong>Total Price</strong></Column2>
+                <Column1>$ {totalPrice.toFixed(2)}</Column1>
+              </Row>
               <br/>
-              <button className='button'>Checkout</button>
+              <CheckOutButton>Checkout</CheckOutButton>
           </>
         )}
-    </div>
+    </CartContainer>
   );
 };
 

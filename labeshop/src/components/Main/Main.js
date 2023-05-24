@@ -1,9 +1,13 @@
+// STYLED
+import { MainContainer } from "./styled";
+
+// COMPONENTS
 import Product from "../Product/Product";
 
 const Main = ({ products, adding, order, minValue, maxValue, searchName }) => {
 
   return (
-    <div className="main column-2">
+    <MainContainer>
         {products
         // BUSCA OS PRODUTOS POR ORDEM CRESCENTE E DECRESCENTE
         .sort((product1, product2) => {
@@ -27,7 +31,7 @@ const Main = ({ products, adding, order, minValue, maxValue, searchName }) => {
         .map( product => (
             <Product key={product.id} product={product} adding={adding}/>
         ))}
-    </div>
+    </MainContainer>
   );
 };
 
