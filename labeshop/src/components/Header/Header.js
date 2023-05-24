@@ -1,33 +1,28 @@
-import { FaShoppingCart } from 'react-icons/fa';
+// STYLED
+import { Badge, HeaderContainer, HeaderLogo, HeaderSingIn } from './styled';
 
+// ICONS
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Header = ({ countCarItems }) => {
   return (
-    <div>
-        <header className="header row">
-            <div>
-                <div className='logo'>
-                    <a href="#/">
-                        <h1>Labeshop</h1>
-                    </a>
-                    <FaShoppingCart size={30} className='cart_icon'/>
+        <HeaderContainer>
+            <HeaderLogo>
+                <a href="#/">
+                    <h1>Labeshop</h1>
+                 </a>
+                <FaShoppingCart size={30} className='cart_icon'/>
                     {' '}
                     {countCarItems ? (
-                        <button className='badge'>{countCarItems}</button>
+                        <Badge>{countCarItems}</Badge>
                     ) : (
                         ''
                     )}
-                </div>
-            </div>
-            {/* <div>
-                <input type="text" size={70}/>  
-                <button>Search</button>
-            </div> */}
-            <div className='signin'>
-                <a href="#/cart">Cart</a> <a href="/#signin">Sign In</a>
-            </div>
-        </header>
-    </div>
+            </HeaderLogo>
+            <HeaderSingIn>
+                <a href="#/login">Log in</a> <a href="/#signin">Sign in</a>
+            </HeaderSingIn>
+        </HeaderContainer>
   );
 };
 

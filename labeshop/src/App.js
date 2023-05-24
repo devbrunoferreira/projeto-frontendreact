@@ -1,8 +1,8 @@
 // DATA
 import Products from './data/products.json';
 
-// STYLES
-import './styles.css';
+// STYLED
+import { Row } from './GlobalStyle';
 
 // HOOKS
 import { useState, useEffect } from 'react';
@@ -12,6 +12,7 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Cart from './components/Cart/Cart';
 import SearchBar from './components/SearchBar/SearchBar';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -67,7 +68,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <Header
       countCarItems={cartItems.length}
       />
@@ -78,7 +79,7 @@ function App() {
       setMaxValue={setMaxValue}
       setSearchName={setSearchName}
       />
-      <div className='row'>
+      <Row>
         <Main 
         products={Products} 
         adding={addingToCart} 
@@ -92,8 +93,9 @@ function App() {
         adding={addingToCart} 
         removing={removingFromCart}
         />
-      </div>
-    </div>
+      </Row>
+      <Footer />
+    </>
   );
 }
 

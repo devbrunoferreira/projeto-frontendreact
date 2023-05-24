@@ -1,8 +1,10 @@
+// STYLED
+import { SearchContainer } from "./styled";
 
 const SearchBar = ({ order, setOrder, setMinValue, setMaxValue, setSearchName }) => {
 
   return (
-    <div className='searchbar'>
+    <SearchContainer>
         <div>
           <span>Search: </span>
           <input 
@@ -34,7 +36,7 @@ const SearchBar = ({ order, setOrder, setMinValue, setMaxValue, setSearchName })
               <option value="descending">Descending</option>
             </select>
         </div>
-    </div>
+    </SearchContainer>
   );
 };
 

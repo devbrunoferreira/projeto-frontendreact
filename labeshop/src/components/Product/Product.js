@@ -1,15 +1,17 @@
+// STYLED
+import { ProductContainer, Image, Information, AddToCart } from "./styled";
 
 const Product = ({ product, adding }) => {
 
   return (
-    <div className="product">
-        <img src={product.image} alt="" />
-        <div className="information">
+    <ProductContainer>
+        <Image src={product.image} alt="" />
+        <Information>
             <p>{product.name}</p>
             <span>$ {product.price.toFixed(2)}</span>
-        </div>
-        <button className="button" onClick={() => adding(product)}>Add to Cart</button>
-    </div>
+        </Information>
+        <AddToCart onClick={() => adding(product)}>Add to Cart</AddToCart>
+    </ProductContainer>
   );
 };
 
